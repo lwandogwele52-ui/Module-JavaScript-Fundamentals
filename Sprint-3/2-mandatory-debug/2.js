@@ -7,9 +7,7 @@
 // take any parameters — it always uses the outer 'num' variable (103)
 // instead of the value passed into the function call.
 
-const num = 103;
-
-function getLastDigit() {
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 
@@ -25,6 +23,4 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 // Explain why the output is the way it is
 //  ==============> write your explanation here
-// The function getLastDigit() is defined with no parameters, so the values
-// 42, 105, and 806 passed into each call are simply ignored — they go
-// nowhere. Instead, the
+// The function getLastDigit() is defined with no parameter, so the values 42, 105, and 806 passed into each call are simply ignored. Instead, the function always uses the hardcoded const num = 103, so it always returns the last digit of 103, which is 3, no matter what argument is passed in.
