@@ -3,7 +3,7 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  const minutes = time.slice(3);
+  const minutes = time.slice(-2);
 
   const period = hours >= 12 ? "pm" : "am";
   const hours12 = hours % 12 === 0 ? 12 : hours % 12;
